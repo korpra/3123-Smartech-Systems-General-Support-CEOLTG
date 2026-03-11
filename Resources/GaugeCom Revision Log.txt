@@ -1,0 +1,108 @@
+GaugeCom Release History
+=====================
+
+
+
+--------------------------------------------------------------------------------------------------------------------------------------------------
+GC version 1.0.1.2 
+- released during TC14 and TC10 OCG install (July 21 - August 7, 2009)
+
+1. Began to add STM event classes (incomplete & unused)
+2. Added new SingleBit Handshake classes
+3. Modified DataLogger backup method (to date unused, still WIP)
+4. Added PLCInBypass and GaugeinAlarm SingleBit handshakes to API
+5. Added Beaded & SampleHeight to SuperBasket. Used in TC NSA event.
+6. Modified Sender Handshakes to add ResponseTimeout value, blocking call now returns on timeout from PLC.
+7. Sender Handshakes also now return Boolean status flag to calling application upon return.
+8. Modified GC file path handling (in API, results queue) to gracefully handle folder paths without terminating "\"
+9. Added logging statements to DLR and DMR logs to track queing/dequeing of sheets
+10. Added Options.xml for API use, currently only one value (LogFiledaysOld, still WIP)
+11. Modified TestApplication to be able to pass in GC startup parameters
+12. Modified code to ALWAYS save "_clean" version of ALL config files (safe backup)
+
+--GC v 1.0.1.2 consists of:--
+Framework - v1.0.2.0
+OnlineApplications - v1.0.2.0
+OCG - v1.0.3.0
+
+-------------------------------------------------------------------------------------------------------------------------
+GC Version 1.0.1.3
+- released August 26, 2009
+
+1. Returned to original datalogger code due to issues with log file rollover.
+2. Continued work with STM events (still not in use)
+
+-GC v 1.0.1.3 consists of:-
+Framework - v1.0.3.0
+OnlineApplications -v1.0.2.1
+OCG - v1.0.4.0
+--------------------------------------------------------------------------------------------------------------------------
+GC Version 1.1.0.0
+- released October 1, 2009
+
+1. Continued changes to Framework & API to support STM events (still not in use)
+2. Revised datalogger to allow saving dated log files.
+3. Added IsWatchdogOnline function to API
+
+--GC v1.1.0.0 consists of:--
+Framework - v1.1.0.0
+OnlineApplications - v1.1.0.0
+OCG - v1.1.0.0
+---------------------------------------------------------------------------------------------------------------------------
+GC Version 1.2
+- released November 12, 2009
+(note: dropping 3rd & 4th digits in version numbering for now).
+
+1. Modified OPC Group and Tag classes to prevent throwing exceptions (to keep GC alive if OPC fails)
+2. Corrected minor bug in exposing WatchDogStatus in API
+
+--GC v1.2 consists of:--
+Framework - v1.2
+OnlineApplications - v1.1 (no change)
+OCG - v1.2
+---------------------------------------------------------------------------------------------------------------------------
+GC Version 1.3
+- released May 2010
+
+1. Added new PLCDropMode SingleBit to API, included in API GUI
+2. Modified Simulator and it's GUI to be able to test SingleBit reads and writes (still testing this function)
+3. Added Resize ability to API and Simulator GUIs
+4. Also modified test application to test new DropMode bit.
+
+--GC v1.3 consists of:--
+Framework - v1.2 (no change)
+OnlineApplications - v1.1 (no change)
+OCG - v1.3
+
+---------------------------------------------------------------------------------------------------------------------------
+GC Version 1.4
+- released Sept 30 2010
+
+1. Modified API call to IsWatchDogOnline (more efficient method...)
+
+--GC v1.4 consists of:--
+Framework - v1.2 (no change)
+OnlineApplications - v1.1 (no change)
+OCG - v1.4
+
+---------------------------------------------------------------------------------------------------------------------------
+GC Revision 1.5
+- released December 08 2010
+
+1. Added new Handshakes for OTCG use: DeliverTwoResults (DL2R) and DemandTwoResults (DM2R)
+2. Added entirely new OTCG Specific API (new dll: Corning.CDT.Gaugecom.OTCG.dll)
+3. Added new ThicknessAlarm (used for Thickness related alarms on OTCG). Renamed original Alarm to CordAlarm (affects OTCG API only)
+4. Modified TestApplication to be able to decide which API to initiate
+5. Enhancements to OTCG API Simulator (will apply these to OCG API in a future release)
+6. Fixed default NextSheetArrival memory map (Born date order was opposite to other handshakes)
+7. Added New Revision class to Framework (to allow programatic retrieval of GC Version information
+8. Modified all Handshake logs to write GaugeCom Revision information on startup
+9. Added Revision string to all GUI titlebars
+
+--GC Rev1.5 consists of:--
+Framework - v1.3
+OnlineApplications - v1.2
+OCG - v1.5
+OTCG - V1.0 (new)
+
+---------------------------------------------------------------------------------------------------------------------------
