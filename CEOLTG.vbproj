@@ -127,6 +127,9 @@
     <Reference Include="Mes.Data.Core.4">
       <HintPath>Resources\Mes.Data.Core.4.dll</HintPath>
     </Reference>
+    <Reference Include="Mes.Data.Dev.UnitTesting.Base">
+      <HintPath>Resources\Mes.Data.Dev.UnitTesting.Base.dll</HintPath>
+    </Reference>
     <Reference Include="Mes.Diagnostics.4">
       <HintPath>Resources\Mes.Diagnostics.4.dll</HintPath>
     </Reference>
